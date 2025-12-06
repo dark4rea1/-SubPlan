@@ -42,7 +42,3 @@ yaml
    - Monthly cost
    - Yearly cost
 4. View clean analytics & track everything easily
-
----
-
-## 📦 Installation
