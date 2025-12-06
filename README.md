@@ -19,7 +19,6 @@
 - **HTML5**
 - **CSS3**
 - **JavaScript**
-- **(Add frameworks if used: React, Node.js, Firebase, etc.)**
 
 ---
 
