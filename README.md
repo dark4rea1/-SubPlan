@@ -25,8 +25,7 @@
 
 ## 📸 Screenshots
 
-> *(Add images here when your UI is ready)*  
-Example:
+![Alt text](https://your-image-link.com/image.png)
 
 
 yaml
