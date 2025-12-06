@@ -26,7 +26,8 @@
 ## 📸 Screenshots
 
 <p align="center">
-  <img src="./assets/Screenshot 2025-12-06 203038.png" width="300" />
+  <img src="./assets/image1.png" width="45%" />
+  <img src="./assets/image2.png" width="45%" />
 </p>
 
 
