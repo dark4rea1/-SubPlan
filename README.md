@@ -25,7 +25,9 @@
 
 ## 📸 Screenshots
 
-![Alt text](https://your-image-link.com/image.png)
+<p align="center">
+  <img src="./assets/Screenshot 2025-12-06 203038.png" width="300" />
+</p>
 
 
 yaml
