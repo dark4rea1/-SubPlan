@@ -26,8 +26,14 @@
 ## 📸 Screenshots
 
 <p align="center">
-  <img src="./assets/image1.png" width="45%" />
-  <img src="./assets/image2.png" width="45%" />
+  <img src="./assets/top-banner.png" width="35%" alt="Top Banner" />
+</p>
+
+<br>
+
+<p align="center">
+  <img src="./assets/image1.png" width="45%" alt="First Image" />
+  <img src="./assets/image2.png" width="45%" alt="Second Image" />
 </p>
 
 
