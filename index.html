@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SubPlan - Subscription Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="nav">
+    <div class="nav-logo">
+      <img src="images/image.png" alt="Logo">
+    </div>
+    <div class="nav-title" id="nav-title">SubPlan</div>
+    <button class="mode-btn" id="mode-btn">Toggle Mode</button>
+  </div>
+
+  <!-- Main Page -->
+  <div class="main" id="main-page">
+    <div class="title">Welcome to SubPlan</div>
+    <div class="sub">The simplest way to track all your subscriptions in one place.</div>
+
+    <div class="features">
+      <div class="feature-box">
+        <div class="icon">📅</div>
+        <div class="f-title">Track Renewals</div>
+        <div class="f-desc">Know exactly when each subscription renews and avoid surprises.</div>
+      </div>
+      <div class="feature-box">
+        <div class="icon">💰</div>
+        <div class="f-title">Cost Overview</div>
+        <div class="f-desc">See your monthly and yearly spending clearly and instantly.</div>
+      </div>
+      <div class="feature-box">
+        <div class="icon">📝</div>
+        <div class="f-title">Manual Entry</div>
+        <div class="f-desc">Add your subscriptions easily without needing accounts or APIs.</div>
+      </div>
+      <div class="feature-box">
+        <div class="icon">👤</div>
+        <div class="f-title">For Everyone</div>
+        <div class="f-desc">Students, freelancers, gamers, families — anyone with recurring payments.</div>
+      </div>
+    </div>
+
+    <button class="start-btn" id="start-btn">Start Now</button>
+  </div>
+
+  <!-- Subscription Manager Page -->
+  <div class="main" id="subscription-page" style="display:none;">
+    <h1>Subscription Manager</h1>
+
+    <form id="subForm">
+      <input type="text" id="name" placeholder="Subscription Name" required>
+      <input type="number" id="price" placeholder="Price ($)" required step="0.01" min="0">
+      <select id="frequency" required>
+        <option value="" disabled selected>Choose Frequency</option>
+        <option value="monthly">Monthly</option>
+        <option value="yearly">Yearly</option>
+      </select>
+      <input type="date" id="renewalDate" required>
+      <button type="submit" class="btn">Add Subscription</button>
+    </form>
+
+    <div id="total-cost">Total Monthly Cost: $0.00 | Total Yearly Cost: $0.00</div>
+
+    <!-- Scrollable table wrapper -->
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Frequency</th>
+            <th>Renewal Date</th>
+            <th>Next Payment</th>
+            <th>Paid</th>
+            <th>Total Yearly</th>
+            <th>Monthly Equivalent</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="subscription-table"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="javascriptWpj.js"></script>
+  <script>
+    // Dark Mode Toggle
+    const modeBtn = document.getElementById('mode-btn');
+    modeBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+    });
+
+    // Show Subscription Manager
+    const startBtn = document.getElementById('start-btn');
+    const mainPage = document.getElementById('main-page');
+    const subPage = document.getElementById('subscription-page');
+    const navTitle = document.getElementById('nav-title');
+
+    startBtn.addEventListener('click', () => {
+      mainPage.style.display = 'none';
+      subPage.style.display = 'flex';
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+
+    // Return to Main Page when clicking on "SubPlan"
+    navTitle.addEventListener('click', () => {
+      mainPage.style.display = 'flex';
+      subPage.style.display = 'none';
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+  </script>
+</body>
+</html>
